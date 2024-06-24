@@ -1,31 +1,14 @@
-import MeshSelection from "./meshselection"
+import React from 'react';
+import MeshSelection from "./meshselection";
+import Hierarchy from "./Hierarchy";
+import Model from "./Model";
 
-export default function Scene() {
-return (
+export default function Scene({ importedScene, searchTerm, setSelectedItem }) {
+  return (
     <>
-    <MeshSelection />
-    {/* <gridHelper args={[100, 100]} name="Grid" /> */}
-    <mesh position={[0,0,0]} name="Box1">   
-        <boxGeometry args={[1, 1, 1]} />
-        <meshBasicMaterial color='purple' />
-    </mesh>
-
-    <mesh position={[0,0,2]} name="Box2">   
-        <boxGeometry args={[1, 1, 1]} />
-        <meshBasicMaterial color='blue' />
-    </mesh>
-
-    <mesh position={[0,0,3]} name="sphere">   
-        <sphereGeometry args={[1, 1, 1]} />
-        <meshBasicMaterial color='green' />
-    </mesh>
-
-    <mesh position={[0,0,4]} name="sphere">   
-        <sphereGeometry args={[1, 1, 1]} />
-        <meshBasicMaterial color='pink' />
-    </mesh>
-
-    <MeshSelection />
+      <MeshSelection />
+      <Hierarchy searchTerm={searchTerm} setSelectedItem={setSelectedItem} />
+      <Model importedScene={importedScene} />
     </>
-)
+  );
 }

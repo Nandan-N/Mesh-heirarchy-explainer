@@ -38,14 +38,28 @@ body {
   display:flex;
 }
 
+
 .sidebar{
-  width: 10%;
+  width: 25%;
   height: 100%;
-  background: #f0f0f0;
+  background: #000000;
   border-right: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.searchbar {
+  background-color: #ffffff; 
+}
+
+.hierarchy {
+  background-color: #ffffff;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px; /* Example background color */
 }
 
 .viewport{
@@ -57,44 +71,18 @@ body {
   justify-content: space-between;
 }
 
-.import-container {
-  position: fixed; 
-  bottom: 20px;   
-  left: 20px;        
-  background-color: #1a1a1a;
+.accessbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5a5858; 
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  z-index: 2000;
+  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end; 
 }
 
-.import-container input[type="file"] {
-  color: #f0f0f0;
-}
 
-.import-container input[type="file"]::-webkit-file-upload-button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #66b2ff;
-  color: #1a1a1a;
-  cursor: pointer;
-}
-
-.import-container input[type="file"]::-webkit-file-upload-button:hover {
-  background-color: #558bcc;
-}
-
-.panel-button {
-  background-color: #66b2ff;
-  color: #1a1a1a;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.panel-button:hover {
-  background-color: #558bcc;
-}
-ss
